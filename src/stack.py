@@ -35,3 +35,17 @@ class Stack:
         data = self.top.data
         self.top = self.top.next_node
         return data
+
+    def __str__(self):
+        """
+        Метод для вывода стека в виде строки
+
+        :return: строка с данными стека
+        """
+        string = ''
+        node = self.top
+        while node is not None:
+            string += str(node.data) + ','
+            node = node.next_node
+        return string
+
