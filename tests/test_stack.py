@@ -35,6 +35,13 @@ class TestStack(unittest.TestCase):
         self.assertEquals(stack.top.data, 'data1')
         self.assertEquals(stack.top.next_node, None)
 
+    def test_str(self):
+        test_assert = Stack()
+        self.assertEquals(str(test_assert.top), "None")
+        test_assert.push("1")
+        self.assertEquals(str(test_assert.top.data), "1")
+        test_assert.push("1")
+        self.assertEquals(str(test_assert.top.next_node.data), "1")
 
 if __name__ == "__main__":
     unittest.main()
