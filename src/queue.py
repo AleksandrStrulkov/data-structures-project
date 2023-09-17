@@ -7,7 +7,8 @@ class Node:
 
         :param data: данные, которые будут храниться в узле
         """
-        pass
+        self.data = data
+        self.next_node = None  # По умолчанию значение следующего узла равно None
 
 
 class Queue:
@@ -15,7 +16,7 @@ class Queue:
 
     def __init__(self):
         """Конструктор класса Queue"""
-        pass
+        self.head, self.tail = None, None  # По умолчанию значения хвоста и головы очереди равно None
 
     def enqueue(self, data):
         """
